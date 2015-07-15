@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def index(request):
+	return HttpResponse("Ayy, Hello World <br/> <a href='/rango/about'>About</a>")
+
+def about(request):
+	return HttpResponse("This is the about section bitch <br/> <a href='/rango/'>Index</a>")
